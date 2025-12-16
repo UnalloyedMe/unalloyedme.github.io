@@ -79,6 +79,26 @@ ul {
   padding-left: 20px;
 }
 
+.box {
+	display: flex;
+	flex-direction: row;
+  	align-items: baseline;
+  	justify-content: center; /* ou space-between si tu préfères */
+  	gap: 2rem; /* ajuste à ton goût */
+}
+
+.fields {
+  margin: 4rem 0;
+  padding: 2.5rem 3rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  backdrop-filter: blur(8px);
+}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
