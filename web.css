@@ -157,37 +157,124 @@ nav a.active {
   color: #ff6ec7;
 }
 
-/* Terminal effect */
-.terminal {
+/* ===== Terminal window wrapping the whole page content ===== */
+.terminal-window {
+  position: relative;
   background: #0d0716;
-  border: 1px solid #3b1f4d;
-  border-radius: 8px;
-  padding: 14px 18px;
-  margin: 0 0 30px 0;
+  border: 1px solid #ff6ec7;
+  border-radius: 10px;
+  box-shadow:
+    0 0 12px rgba(255, 110, 199, 0.35),
+    0 0 40px rgba(140, 80, 255, 0.15),
+    inset 0 0 30px rgba(255, 110, 199, 0.04);
+  overflow: hidden;
   font-family: 'Consolas', 'Courier New', monospace;
-  font-size: 0.95rem;
-  color: #a8ff8c;
-  box-shadow: 0 0 10px rgba(255, 110, 199, 0.15);
-  max-width: 1000px;
 }
 
-.terminal .prompt {
-  color: #ff6ec7;
+/* scanline overlay for a cyberpunk CRT feel */
+.terminal-window::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  mix-blend-mode: overlay;
 }
 
-.terminal .path {
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(90deg, #1a0c2e, #2b1340);
+  border-bottom: 1px solid #3b1f4d;
+  padding: 10px 16px;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.terminal-dots .red { background: #ff5f56; color: #ff5f56; }
+.terminal-dots .yellow { background: #ffbd2e; color: #ffbd2e; }
+.terminal-dots .green { background: #27c93f; color: #27c93f; }
+
+.terminal-titlebar .terminal-title {
+  font-size: 0.85rem;
   color: #ddb3f8;
+  letter-spacing: 0.5px;
 }
 
-.terminal .cursor {
+.terminal-body {
+  position: relative;
+  padding: 22px 26px 36px;
+}
+
+.terminal-line {
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.terminal-line .prompt {
+  color: #ff6ec7;
+  text-shadow: 0 0 6px rgba(255, 110, 199, 0.6);
+}
+
+.terminal-line .path {
+  color: #a29bfe;
+}
+
+.terminal-line .cmd-text {
+  color: #a8ff8c;
+  text-shadow: 0 0 6px rgba(168, 255, 140, 0.5);
+}
+
+.cursor {
   display: inline-block;
   width: 8px;
   background: #a8ff8c;
+  box-shadow: 0 0 6px rgba(168, 255, 140, 0.8);
   margin-left: 2px;
   animation: blink 1s steps(1) infinite;
+}
+
+.cursor.hidden {
+  display: none;
 }
 
 @keyframes blink {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
+}
+
+/* output revealed once the command "finishes" typing */
+.terminal-output {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.terminal-output.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* tone down the sections so they read as terminal output, not a separate page */
+.terminal-output section,
+.terminal-output .fields {
+  background: rgba(255, 255, 255, 0.02);
 }
