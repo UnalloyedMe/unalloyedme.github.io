@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UnalloyedMe</title>
+  <title>UnalloyedMe - Home</title>
   <link rel="stylesheet" href="web.css">
 </head>
 
@@ -16,83 +16,49 @@
         <h1>UnalloyedMe<span class="dot">.</span></h1>
         <p>Cybersecurity • Pentest • Code • CTF</p>
         <nav>
-          <a href="#about">Introduction</a>
-          <a href="#goals">Goals</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="writeups.html">WriteUps</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </div>
   </header>
 
   <main class="container">
+
+    <div class="terminal">
+      <span class="prompt">unalloyedme@portfolio</span>:<span class="path">~</span>$ <span class="cmd-text" data-cmd="cat home.txt"></span><span class="cursor">&nbsp;</span>
+    </div>
+
     <section id="about">
       <h2>Intro</h2>
-      <p>Hi ! I am <strong>UnalloyedMe</strong>, cybersecurity student, developer, and videogames enjoyer. 
+      <p>Hi ! I am <strong>UnalloyedMe</strong>, cybersecurity student, developer, and videogames enjoyer.
         I am coding tools for pentest and various purposes and I like to learn by practicing.</p>
     </section>
 
-	<div class="box" id="goals">
-    <section class="fields">
-      <h2>My goals</h2>
-      <ul>
-        <li>🧠 Become pentester</li>
-        <li>📚 Participate in CTF challenges</li>
-        <li>🎌 Create cybersecurity relate associations or clubs</li>
-        <li>🔧 Code some new tools to learn more languages</li>
-      </ul>
-    </section>
+    <div class="box" id="goals">
+      <section class="fields">
+        <h2>My goals</h2>
+        <ul>
+          <li>🧠 Become pentester</li>
+          <li>📚 Participate in CTF challenges</li>
+          <li>🎌 Create cybersecurity relate associations or clubs</li>
+          <li>🔧 Code some new tools to learn more languages</li>
+        </ul>
+      </section>
 
-	<section class="fields">
-      <h2>Fields of interest</h2>
-      <ul>
-        <li>🌐 Web & Server Hacking</li>
-        <li>👾 Reverse Engineering & Cracking</li>
-		<li>🔒 Cryptography</li>
-        <li>💻 Malware Dev (for educational purpose)</li>
-      </ul>
-    </section>
-	</div>
+      <section class="fields">
+        <h2>Fields of interest</h2>
+        <ul>
+          <li>🌐 Web & Server Hacking</li>
+          <li>👾 Reverse Engineering & Cracking</li>
+          <li>🔒 Cryptography</li>
+          <li>💻 Malware Dev (for educational purpose)</li>
+        </ul>
+      </section>
+    </div>
 
-    <section id="projects" >
-      <h2>Projects</h2>
-      <div class="projects"> 
-        <div class="card">
-			<img src="img/logoHMIYC.webp" alt="HMIYC Logo" class="project-img" />
-        <a href="https://github.com/UnalloyedMe/hackmeifucan" target="blank" class="nav-link">
-          <h3>Hack me if you can</h3>
-          <p>A hacking website. I mostly use it as a exercise for webapp management and serverside manipulations.
-		  </p>
-        </a>
-        </div>
-        <div class="card">
-			<img src="img/logoHeracles.png" alt="Heracles Logo" class="project-img" />
-          <a href="https://github.com/UnalloyedMe/heracles" target="blank" class="nav-link">
-          <h3>Heracles</h3>
-          <p>A new GUI for Hydra</p>
-        </a>
-        </div>
-        <div class="card">
-			<img src="img/UnalloyedMe.jpg" alt="Illustration du projet" class="project-img" />
-          <a href="https://github.com/UnalloyedMe/Capture-The-Flog---CTF-writeups-collection" target="blank" class="nav-link">
-          <h3>Writeup CTF</h3>
-          <p>My future CTF writeups</p>
-        </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="fields">
-      <h2>Contact</h2>
-      <p>If you wanna talk about work or check my profile on other websites</p>
-      <ul>
-        <li><a href="https://github.com/UnalloyedMe" target="_blank">GitHub</a></li>
-        <li><a href="https://discord.com/users/417231274621534209" target="_blank">Discord</a></li>
-		<li><a href="https://www.root-me.org/UnalloyedMe?lang=fr#21d17d190c5de5183eb4ed64203c93be" target="_blank">Root Me</a></li>
-		<li><a href="https://tryhackme.com/p/Gahyeji" target="_blank">Try Hack Me</a></li>
-      </ul>
-	  <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1462601" style='border:none;'></iframe>
-    </section>
   </main>
 
   <footer>
@@ -101,5 +67,6 @@
     </div>
   </footer>
 
+  <script src="terminal.js"></script>
 </body>
 </html>

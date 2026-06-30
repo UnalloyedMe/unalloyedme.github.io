@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UnalloyedMe - WriteUps</title>
+  <link rel="stylesheet" href="web.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-content">
+      <img src="img/Shanks.jpg" alt="Photo de profil de UnalloyedMe" class="profile-pic" />
+      <div>
+        <h1>UnalloyedMe<span class="dot">.</span></h1>
+        <p>Cybersecurity • Pentest • Code • CTF</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="writeups.html" class="active">WriteUps</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="terminal">
+      <span class="prompt">unalloyedme@portfolio</span>:<span class="path">~</span>$ <span class="cmd-text" data-cmd="cat writeups.txt"></span><span class="cursor">&nbsp;</span>
+    </div>
+
+    <section id="writeups">
+      <h2>CTF WriteUps</h2>
+      <p>Voici une collection de mes writeups de CTF. La liste complète est disponible sur mon dépôt GitHub dédié,
+        et sera mise à jour au fur et à mesure de mes participations.</p>
+
+      <div class="projects">
+        <div class="card">
+          <a href="https://github.com/UnalloyedMe/Capture-The-Flog---CTF-writeups-collection" target="_blank" class="nav-link">
+            <h3>Capture The Flog</h3>
+            <p>Collection complète de mes writeups CTF, organisée par catégorie (Web, Pwn, Crypto, Reverse...).</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.root-me.org/UnalloyedMe?lang=fr#21d17d190c5de5183eb4ed64203c93be" target="_blank" class="nav-link">
+            <h3>Root Me</h3>
+            <p>Suivi de ma progression et de mes challenges résolus sur Root Me.</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://tryhackme.com/p/Gahyeji" target="_blank" class="nav-link">
+            <h3>Try Hack Me</h3>
+            <p>Suivi de ma progression et de mes rooms complétées sur TryHackMe.</p>
+          </a>
+        </div>
+      </div>
+
+      <p style="margin-top:2rem; color:#caa9dd;">📌 D'autres writeups détaillés seront ajoutés ici prochainement.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Gahyeji. My portfolio for people who are curious about my work ✨</p>
+    </div>
+  </footer>
+
+  <script src="terminal.js"></script>
+</body>
+</html>

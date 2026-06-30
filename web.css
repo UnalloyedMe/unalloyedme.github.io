@@ -151,3 +151,43 @@ footer {
   display:block;
   padding:15px
  }
+
+/* Active nav link */
+nav a.active {
+  color: #ff6ec7;
+}
+
+/* Terminal effect */
+.terminal {
+  background: #0d0716;
+  border: 1px solid #3b1f4d;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 0 0 30px 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #a8ff8c;
+  box-shadow: 0 0 10px rgba(255, 110, 199, 0.15);
+  max-width: 1000px;
+}
+
+.terminal .prompt {
+  color: #ff6ec7;
+}
+
+.terminal .path {
+  color: #ddb3f8;
+}
+
+.terminal .cursor {
+  display: inline-block;
+  width: 8px;
+  background: #a8ff8c;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
