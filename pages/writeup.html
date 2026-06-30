@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UnalloyedMe - WriteUp</title>
+  <link rel="stylesheet" href="../style/web.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-content">
+      <img src="../img/Shanks.jpg" alt="Photo de profil de UnalloyedMe" class="profile-pic" />
+      <div>
+        <h1>UnalloyedMe<span class="dot">.</span></h1>
+        <p>Cybersecurity • Pentest • Code • CTF</p>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="writeups.html" class="active">WriteUps</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="terminal-window">
+      <div class="terminal-titlebar">
+        <div class="terminal-dots">
+          <span class="red"></span>
+          <span class="yellow"></span>
+          <span class="green"></span>
+        </div>
+        <span class="terminal-title" id="terminal-title">unalloyedme@portfolio: ~</span>
+      </div>
+
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="prompt">unalloyedme@portfolio</span>:<span class="path">~</span>$
+          <span class="cmd-text" id="cmd-text" data-cmd=""></span><span class="cursor">&nbsp;</span>
+        </div>
+
+        <div class="terminal-output">
+          <a href="writeups.html" class="md-back">&lt; retour à la liste des writeups</a>
+          <div id="md-target" class="md-content">
+            <p class="md-loading">chargement du fichier...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Gahyeji. My portfolio for people who are curious about my work ✨</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/terminal.js"></script>
+  <script src="../scripts/writeup.js"></script>
+</body>
+</html>
